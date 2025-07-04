@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Palak ❤️</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Pacifico&display=swap');
+        
+        :root {
+            --primary: #ff758f;
+            --secondary: #ff7eb3;
+            --dark: #333;
+            --light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(to right, #fff5f5, #fff);
+            overflow-x: hidden;
+            color: var(--dark);
+        }
+        
+        .heart-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .heart {
+            position: absolute;
+            opacity: 0;
+            animation: float-up 4s ease-in-out infinite;
+        }
+        
+        @keyframes float-up {
+            0% {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) scale(1);
+                opacity: 0;
+            }
+        }
+        
+        .title {
+            font-family: 'Pacifico', cursive;
+            color: var(--primary);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .message-box {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(255, 117, 143, 0.2);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .love-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .love-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 117, 143, 0.3);
+        }
+        
+        .love-card .card-body {
+            padding: 20px;
+        }
+        
+        .love-card .card-title {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .counter-box {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .counter-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .quote-box {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .quote-box:before {
+            content: """;
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            color: rgba(255, 117, 143, 0.1);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        
+        .photo-gallery {
+            margin-bottom: 30px;
+        }
+        
+        .photo-item {
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .photo-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .photo-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .photo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            padding: 15px;
+            color: white;
+        }
+        
+        .btn-pink {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-pink:hover {
+            background: #ff637d;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .encouragement-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        footer {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Heart Animation Background -->
+    <div class="heart-animation" id="heartContainer"></div>
+    
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="title display-4">For My Dearest Palak ❤️</h1>
+            <p class="lead">A little something to brighten your day</p>
+        </div>
+        
+        <!-- Personal Message -->
+        <div class="message-box">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">My Beautiful Palak,</h2>
+                    <p class="mb-4">When you're feeling sad, please remember how amazing you are. You light up my world in ways words can't describe.</p>
+                    <p class="mb-4">You're stronger than you think, more capable than you realize, and more loved than you could ever imagine.</p>
+                    <p class="mb-4">This is just a small token of how much you mean to me and how much I believe in you.</p>
+                    <p>With all my love,</p>
+                    <h4 class="mt-3">Your Partner ❤️</h4>
+                </div>
+                <div class="col-lg-6">
+                    <img src="./images/Snapchat-313300361.jpg" alt="Romantic sunset with couple silhouette walking hand in hand on beach" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Counter Section -->
+        <div class="counter-box">
+            <div class="row text-center">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h3>We've Been Together For</h3>
+                    <div class="counter-number" id="daysTogether">0</div>
+                    <p>Days</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h3>You've Made Me Smile</h3>
+                    <div class="counter-number" id="smilesCount">0</div>
+                    <p>Times</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Memories We've Created</h3>
+                    <div class="counter-number" id="memoriesCount">0</div>
+                    <p>And counting!</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Reasons I Love You -->
+        <h2 class="text-center mb-4 title">Reasons Why You're Amazing</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="love-card" onclick="revealCard(this)">
+                    <img src="./images/Screenshot_20250427_023933_WhatsApp.jpg" alt="Close-up of smiling woman's face radiating happiness" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Click to Reveal</h5>
+                        <p class="card-text reason-text" style="display: none;">Your smile can brighten even the darkest day. It's like sunshine for my soul.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="love-card" onclick="revealCard(this)">
+                    <img src="./images/Snapchat-679927735.jpg" alt="Diverse group of women supporting each other in beautiful outdoor setting" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Click to Reveal</h5>
+                        <p class="card-text reason-text" style="display: none;">Your kindness touches everyone around you. You have a heart of gold that inspires me daily.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="love-card" onclick="revealCard(this)">
+                    <img src="./images/IMG-20250619-WA0007.jpg" alt="Abstract representation of strength with glowing hands holding up a bright flame" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Click to Reveal</h5>
+                        <p class="card-text reason-text" style="display: none;">Your strength is incredible. You handle challenges with grace and determination.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Encouragement Section -->
+        <div class="message-box mt-5">
+            <h2 class="text-center mb-4 title">Palak, You Can Do Anything!</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="encouragement-item">
+                        <h4>Dream Big</h4>
+                        <p>No dream is too big when you put your mind to it. I believe in your ability to achieve anything you set your heart on.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="encouragement-item">
+                        <h4>Overcome Challenges</h4>
+                        <p>Every challenge you face makes you stronger. You've overcome so much already, and I know you can handle whatever comes your way.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="encouragement-item">
+                        <h4>Be Proud</h4>
+                        <p>Take pride in everything you accomplish, big or small. Your achievements matter and make a difference in the world.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="encouragement-item">
+                        <h4>Keep Growing</h4>
+                        <p>Your capacity for growth is boundless. Every day, you're becoming more amazing than the day before.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Inspirational Quote Generator -->
+        <div class="quote-box text-center">
+            <h3 class="mb-3">Today's Inspiration Just For You</h3>
+            <p id="quoteText">"You are braver than you believe, stronger than you seem, and smarter than you think."</p>
+            <p id="quoteAuthor">- A.A. Milne</p>
+            <button class="btn btn-pink mt-3" onclick="newQuote()">Get Another Quote</button>
+        </div>
+        
+        <!-- Photo Gallery -->
+        <div class="photo-gallery">
+            <h2 class="text-center mb-4 title">Our Beautiful Memories</h2>
+            <p class="text-center">Though we are apart, our video chats are filled with laughter and love. Here are some moments we cherish!</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="photo-item">
+                        <img src="./images/Snapchat-1406603535.jpg" alt="Couple laughing together on video chat">
+                        <div class="photo-overlay">
+                            <h4>Our Fun Video Chats</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="photo-item">
+                        <img src="./images/Snapchat-1472978841.jpg" alt="Couple sharing a moment during a video call">
+                        <div class="photo-overlay">
+                            <h4>Sharing Moments Together</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="photo-item">
+                        <img src="./images/VideoCapture_20250704-215217.jpg" alt="Couple enjoying a virtual date">
+                        <div class="photo-overlay">
+                            <h4>Our Virtual Dates</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Final Message -->
+        <div class="text-center mt-5">
+            <h3 class="mb-4 title">Remember...</h3>
+            <p class="lead">You're loved more than words can express, treasured more than you'll ever know, and capable of more than you can imagine.</p>
+            <button class="btn btn-pink btn-lg mt-3" onclick="showHeartRain()">Click For Extra Love</button>
+        </div>
+    </div>
+    
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">Created with love, just for you Palak ❤️</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Create floating hearts
+        function createHearts() {
+            const container = document.getElementById('heartContainer');
+            for (let i = 0; i < 30; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+                heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                heart.style.animationDelay = (Math.random() * 5) + 's';
+                container.appendChild(heart);
+            }
+        }
+        
+        // Initialize counters
+        function initCounters() {
+            // Set your anniversary date here (YYYY, MM-1, DD)
+            const anniversary = new Date(2025, 2, 14); // March 14, 2025
+            const today = new Date();
+            const diffTime = Math.abs(today - anniversary);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+            
+            document.getElementById('daysTogether').textContent = diffDays;
+            
+            // Let's estimate smiles and memories based on days
+            document.getElementById('smilesCount').textContent = diffDays * 3;
+            document.getElementById('memoriesCount').textContent = diffDays * 2;
+        }
+        
+        // Quote generator
+        const quotes = [
+            {
+                text: "You are enough just as you are. Each emotion you feel makes you human.",
+                author: "Meghan Markle"
+            },
+            {
+                text: "You must love and care for yourself because that's when the best comes out.",
+                author: "Palak's Partner"
+            },
+            {
+                text: "She remembered who she was and the game changed.",
+                author: "Lalah Deliah"
+            },
+            {
+                text: "Believe in your infinite potential. Your only limits are those you set upon yourself.",
+                author: "Palak's Cheerleader"
+            },
+            {
+                text: "You're allowed to be both a masterpiece and a work in progress simultaneously.",
+                author: "Sophia Bush"
+            }
+        ];
+        
+        function newQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quoteText').textContent = `"${quotes[randomIndex].text}"`;
+            document.getElementById('quoteAuthor').textContent = `- ${quotes[randomIndex].author}`;
+        }
+        
+        // Reveal card content
+        function revealCard(card) {
+            const textElement = card.querySelector('.reason-text');
+            const titleElement = card.querySelector('.card-title');
+            
+            if (textElement.style.display === 'none') {
+                textElement.style.display = 'block';
+                titleElement.style.display = 'none';
+            } else {
+                textElement.style.display = 'none';
+                titleElement.style.display = 'block';
+            }
+        }
+        
+        // Heart rain effect
+        function showHeartRain() {
+            const container = document.getElementById('heartContainer');
+            container.innerHTML = '';
+            
+            for (let i = 0; i < 100; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.fontSize = (Math.random() * 30 + 15) + 'px';
+                heart.style.animationDuration = (Math.random() * 2 + 1) + 's';
+                heart.style.animationDelay = (Math.random() * 0.5) + 's';
+                container.appendChild(heart);
+            }
+            
+            setTimeout(createHearts, 2000);
+        }
+        
+        // Initialize everything when page loads
+        window.onload = function() {
+            createHearts();
+            initCounters();
+        };
+    </script>
+</body>
+</html>
